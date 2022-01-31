@@ -23,7 +23,7 @@
       "required": true
     },
     "cursos": {
-      "via": "plataformas",
+      "via": "unidades",
       "collection": "curso"
     }
   }

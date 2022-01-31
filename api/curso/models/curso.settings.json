@@ -82,7 +82,7 @@
       "model": "publicado",
       "via": "cursos"
     },
-    "plataformas": {
+    "unidades": {
       "via": "cursos",
       "collection": "unidade",
       "dominant": true
