@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categorias",
+  "collectionName": "Instrutores",
   "info": {
-    "name": "categoria",
+    "name": "Instrutore",
     "description": ""
   },
   "options": {
@@ -23,8 +23,18 @@
       "required": true
     },
     "cursos": {
-      "via": "categorias",
+      "via": "instrutores",
       "collection": "curso"
+    },
+    "foto_instrutor": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

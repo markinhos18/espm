@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos",
+  "info": {
+    "name": "Cursos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nome",
+      "required": true
+    },
+    "breve_descricao": {
+      "type": "text",
+      "required": true,
+      "unique": false,
+      "maxLength": 160
+    },
+    "descricao": {
+      "type": "richtext",
+      "required": true
+    },
+    "preco": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "data_lancamento": {
+      "type": "date"
+    },
+    "avaliacao": {
+      "type": "enumeration",
+      "enum": [
+        "Gratuito",
+        "pegi3",
+        "pegi7",
+        "pegi12",
+        "pegi16",
+        "pegi18"
+      ]
+    },
+    "background_jogo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "galeria": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "instrutores": {
+      "via": "cursos",
+      "collection": "instrutor",
+      "dominant": true
+    },
+    "publicado": {
+      "model": "publicado",
+      "via": "cursos"
+    },
+    "plataformas": {
+      "via": "cursos",
+      "collection": "unidade",
+      "dominant": true
+    },
+    "categorias": {
+      "via": "cursos",
+      "collection": "categoria",
+      "dominant": true
+    }
+  }
+}

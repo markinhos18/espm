@@ -21,9 +21,9 @@
       "targetField": "nome",
       "required": true
     },
-    "games": {
+    "cursos": {
       "via": "publicado",
-      "collection": "game"
+      "collection": "curso"
     }
   }
 }

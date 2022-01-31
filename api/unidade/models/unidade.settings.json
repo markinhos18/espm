@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categorias",
+  "collectionName": "Unidades",
   "info": {
-    "name": "categoria",
+    "name": "Unidades",
     "description": ""
   },
   "options": {
@@ -23,7 +23,7 @@
       "required": true
     },
     "cursos": {
-      "via": "categorias",
+      "via": "plataformas",
       "collection": "curso"
     }
   }
