@@ -1,9 +1,3 @@
-/*
- *
- * HomePage
- *
- */
-/* eslint-disable */
 import React, { memo, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { get, upperFirst } from "lodash";
