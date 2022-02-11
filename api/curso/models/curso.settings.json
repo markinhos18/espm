@@ -26,7 +26,7 @@
       "type": "text",
       "required": true,
       "unique": false,
-      "maxLength": 160
+      "maxLength": 300
     },
     "descricao": {
       "type": "richtext",
