@@ -42,14 +42,14 @@ export const SectionNews = styled(Sections)`
   ${({ theme }) => css`
     margin-bottom: calc(${theme.spacings.xxlarge} * 2);
     ${media.greaterThan('large')`
-      margin-top: -13rem;
+      margin-top: 3rem;
     `}
     ${media.greaterThan('medium')`
       margin-bottom: 0;
-      padding-top: 14rem;
+      padding-top: 10rem;
       padding-bottom: 10rem;
       background-color: ${theme.colors.lightBg};
-      clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+      clip-path: polygon(0 0,100% 20%,100% 100%,0 80%);
       ${HeadingStyles.Wrapper} {
         color: ${theme.colors.black};
       }
@@ -57,13 +57,37 @@ export const SectionNews = styled(Sections)`
   `}
 `
 
-export const SectionMostPopular = styled(Sections)``
+export const SectionMostPopular = styled(Sections)`
+  ${({ theme }) => css`
+    margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+    ${media.greaterThan('large')`
+      margin-top: -13rem;
+    `}
+    ${media.greaterThan('medium')`
+      margin-bottom: 0;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+      
+    `}
+  `}
+`
 
 export const SectionUpcoming = styled(Sections)`
   ${({ theme }) => css`
-    ${HighlightStyles.Wrapper} {
-      margin-top: calc(${theme.spacings.xlarge} * 2);
-    }
+    margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+    ${media.greaterThan('large')`
+      margin-top: -13rem;
+    `}
+    ${media.greaterThan('medium')`
+      margin-bottom: 0;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+      background-color: ${theme.colors.lightBg};
+      clip-path: polygon(0 0,100% 12%,100% 100%,0 90%);
+      ${HeadingStyles.Wrapper} {
+        color: ${theme.colors.black};
+      }
+    `}
   `}
 `
 

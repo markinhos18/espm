@@ -81,7 +81,7 @@ export const Wrapper = styled.section`
   .slick-vertical .slick-slide {
     display: block;
     height: auto;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
   }
   .slick-arrow.slick-hidden {
     display: none;

@@ -1,7 +1,9 @@
 export default {
   grid: {
     container: '130rem',
-    gutter: '3.2rem'
+    containerfluid: '140rem',
+    gutter: '3.2rem',
+    gutterfluid: '3.2rem'
   },
   border: {
     radius: '0.4rem'
@@ -34,8 +36,9 @@ export default {
     darkGray: '#2E2F42'
   },
   spacings: {
+    xxxsmall: '0.3rem',
     xxsmall: '0.8rem',
-    xsmall: '1.6rem',
+    xsmall: '0.3rem',
     small: '2.4rem',
     medium: '3.2rem',
     large: '4.0rem',
@@ -49,4 +52,4 @@ export default {
     modal: 40,
     alwaysOnTop: 50
   }
-}
+} as const

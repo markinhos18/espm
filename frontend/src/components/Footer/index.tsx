@@ -9,16 +9,16 @@ const Footer = () => (
     <Logo />
     <S.Content>
       <S.Column>
-        <Heading color="black" size="small" lineBottom lineColor="secondary">
-          Contact Us
+        <Heading color="black" size="small" lineBottom lineColor="primary">
+          Contate-nos
         </Heading>
 
         <a href="mailto:sac@wongames.com">sac@wongames.com</a>
       </S.Column>
 
       <S.Column>
-        <Heading color="black" lineColor="secondary" lineBottom size="small">
-          Follow us
+        <Heading color="black" lineColor="primary" lineBottom size="small">
+          Siga-nos
         </Heading>
 
         <nav aria-labelledby="social media">
@@ -54,8 +54,8 @@ const Footer = () => (
       </S.Column>
 
       <S.Column>
-        <Heading color="black" lineColor="secondary" lineBottom size="small">
-          Links
+        <Heading color="black" lineColor="primary" lineBottom size="small">
+          Institucional
         </Heading>
 
         <nav aria-labelledby="footer resources">
@@ -63,7 +63,7 @@ const Footer = () => (
             <a>Home</a>
           </Link>
           <Link href="/games">
-            <a>Store</a>
+            <a>Loja</a>
           </Link>
           <Link href="/search">
             <a>Buscar</a>
@@ -72,7 +72,7 @@ const Footer = () => (
       </S.Column>
 
       <S.Column aria-labelledby="footer-contact">
-        <Heading color="black" lineColor="secondary" lineBottom size="small">
+        <Heading color="black" lineColor="primary" lineBottom size="small">
           Location
         </Heading>
         <span>Lorem ipsum dolor sit.</span>
@@ -81,7 +81,7 @@ const Footer = () => (
       </S.Column>
     </S.Content>
 
-    <S.Copyright>Won Games 2020 © All rights reserved.</S.Copyright>
+    <S.Copyright>ESPM 2022 © Todos direitos reservados.</S.Copyright>
   </S.Wrapper>
 )
 

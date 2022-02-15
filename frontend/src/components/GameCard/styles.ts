@@ -49,7 +49,7 @@ export const Content = styled.div`
     justify-content: space-between;
     position: relative;
     height: 100%;
-    margin: ${theme.spacings.xsmall};
+    margin: ${theme.spacings.small};
   `}
 `
 

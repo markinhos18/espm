@@ -14,7 +14,7 @@ export const Wrapper = styled.main`
     }
   `}
   ${media.greaterThan('medium')`
-    box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   `}
 `
 type ImageProps = {
@@ -42,7 +42,7 @@ export const Caption = styled.div`
       border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
       padding: ${theme.spacings.large};
       position: absolute;
-      bottom: 0;
+      bottom: 2rem;
       left: 0;
     `}
   `}

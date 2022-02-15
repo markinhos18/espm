@@ -5,7 +5,7 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import GameCard from '.'
 const props = {
   title: 'BRANDING E COMPORTAMENTO DO CONSUMIDOR',
-  authors: 'Gabriel Rossi',
+  author: 'Gabriel Rossi',
   img: 'https://www.espm.br/wp-content/uploads/Cursos-Ferias-2022-min.jpg',
   price: 'R$ 740,00'
 }
@@ -16,7 +16,7 @@ describe('<GameCard />', () => {
       screen.getByRole('heading', { name: props.title })
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: props.authors })
+      screen.getByRole('heading', { name: props.author })
     ).toBeInTheDocument()
     expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
       'src',

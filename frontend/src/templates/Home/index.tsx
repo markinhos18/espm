@@ -3,6 +3,7 @@ import { GameCardProps } from 'components/GameCard'
 import Highlight, { HighlightProps } from 'components/Highlight'
 
 import { Container } from 'components/Container'
+import { ContainerFluid } from 'components/ContainerFluid'
 import Footer from 'components/Footer'
 import Heading from 'components/Heading'
 import Menu from 'components/Menu'
@@ -35,16 +36,16 @@ const Home = ({
   freeHighligth
 }: HomeTemplateProps) => (
   <section>
-    <Container>
+    <ContainerFluid>
       <Menu />
-      <S.SectionBanner>
-        <BannerSlider items={banners} />
-      </S.SectionBanner>
-    </Container>
+    </ContainerFluid>
+    <S.SectionBanner>
+      <BannerSlider items={banners} />
+    </S.SectionBanner>
 
     <S.SectionNews>
       <Container>
-        <Heading lineLeft lineColor="secondary">
+        <Heading lineLeft lineColor="primary">
           Lançamentos
         </Heading>
 
@@ -53,24 +54,28 @@ const Home = ({
     </S.SectionNews>
     <Container>
       <S.SectionMostPopular>
-        <Heading lineLeft lineColor="secondary">
+        <Heading lineLeft lineColor="primary">
           Cursos populares
         </Heading>
         <Highlight {...mostPopularHighlight} />
         <GameCardSlider items={mostPopularGames} />
       </S.SectionMostPopular>
+    </Container>
 
-      <S.SectionUpcoming>
-        <Heading lineLeft lineColor="secondary">
+    <S.SectionUpcoming>
+      <Container>
+        <Heading lineLeft lineColor="primary">
           Em breve
         </Heading>
-        <GameCardSlider items={upcommingGames} />
+        <GameCardSlider items={upcommingGames} color="black" />
         <Highlight {...upcommingHighligth} />
-        <GameCardSlider items={upcommingMoreGames} />
-      </S.SectionUpcoming>
+        <GameCardSlider items={upcommingMoreGames} color="black" />
+      </Container>
+    </S.SectionUpcoming>
 
+    <Container>
       <S.SectionFreeGames>
-        <Heading lineLeft lineColor="secondary">
+        <Heading lineLeft lineColor="primary">
           Cursos gratuitos
         </Heading>
         <Highlight {...freeHighligth} />
@@ -79,9 +84,9 @@ const Home = ({
     </Container>
 
     <S.SectionFooter>
-      <Container>
+      <ContainerFluid>
         <Footer />
-      </Container>
+      </ContainerFluid>
     </S.SectionFooter>
   </section>
 )
