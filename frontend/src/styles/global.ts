@@ -58,7 +58,10 @@ const GlobalStyles: GlobalStyleComponent<
       font-size: ${theme.font.sizes.medium};
       ${!removeBg &&
       css`
-        background: ${theme.colors.mainBg};
+        background-color: ${theme.colors.mainBg};
+        background-image: url(../img/bg2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
       `}
     }
   `}

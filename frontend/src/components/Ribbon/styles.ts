@@ -8,7 +8,8 @@ const wrapperModifiers = {
     background-color: ${theme.colors[color]};
     &::before {
       border-left-color: ${darken(0.2, theme.colors[color])};
-      border-top-color: ${darken(0.2, theme.colors[color])};
+      border-top-color: transparent;
+      border-right-color: ${darken(0.2, theme.colors[color])};
     }
   `,
 
@@ -16,10 +17,11 @@ const wrapperModifiers = {
     font-size: ${theme.font.sizes.small};
     padding: 0 ${theme.spacings.small};
     height: 3.6rem;
-    right: 0;
+    right: 1rem;
     &::before {
-      top: 3.6rem;
-      border-top-width: 1rem;
+      top: 0;
+      right: 11.5rem;
+      border-top-width: 2rem;
       border-right-width: 2rem;
     }
   `,
@@ -40,7 +42,7 @@ const wrapperModifiers = {
 export const Wrapper = styled.div<RibbonProps>`
   ${({ theme, color, size }) => css`
     position: absolute;
-    top: ${theme.spacings.xsmall};
+    top: 0;
     display: flex;
     align-items: center;
     font-weight: ${theme.font.bold};
@@ -53,7 +55,7 @@ export const Wrapper = styled.div<RibbonProps>`
       border-left-width: 0rem;
       border-right-color: transparent;
       border-bottom-color: transparent;
-      border-bottom-width: 1rem;
+      border-bottom-width: 0;
     }
     ${!!color && wrapperModifiers.color(theme, color)};
     ${!!size && wrapperModifiers[size](theme)};

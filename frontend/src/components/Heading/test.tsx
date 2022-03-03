@@ -47,6 +47,14 @@ describe('<Heading />', () => {
     )
   })
 
+  it('should render a heading with a huge size', () => {
+    renderWithTheme(<Heading size="huge">ESPM</Heading>)
+
+    expect(screen.getByRole('heading', { name: /espm/i })).toHaveStyle({
+      'font-size': '5.2rem'
+    })
+  })
+
   it('should render a Heading with a primary line color', () => {
     renderWithTheme(
       <Heading lineColor="primary" lineLeft lineBottom>
