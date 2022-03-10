@@ -18,7 +18,7 @@ const Auth = ({ title, children }: AuthProps) => (
           </a>
         </Link>
         <div>
-          <Heading size='huge'>INUSITUDE</Heading>
+          <Heading size='huge' color='white'>INUSITUDE</Heading>
           <S.Subtitle>Ser transformador é praticar o inusitado</S.Subtitle>
         </div>
         <S.BannerFooter>

@@ -6,7 +6,7 @@ export const SectionFooter = styled.section`
     margin-top: ${theme.spacings.large};
     padding-bottom: ${theme.spacings.xsmall};
     padding-top: ${theme.spacings.xxlarge};
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.lightBg};
     clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
     ${media.greaterThan('medium')`
       padding-top: calc(${theme.spacings.xxlarge} * 2);

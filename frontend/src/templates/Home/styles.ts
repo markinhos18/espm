@@ -3,6 +3,17 @@ import media from 'styled-media-query'
 
 import * as HeadingStyles from 'components/Heading/styles'
 
+
+
+export const SectionTop = styled.section`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.mainBg};
+    background-image: url(../img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  `}
+`
+
 export const SectionBanner = styled.section`
   ${({ theme }) => css`
     margin: ${theme.spacings.large} calc(-${theme.grid.gutter} / 2);
@@ -39,21 +50,36 @@ export const SectionNews = styled.div`
 
 export const SectionUpcoming = styled.div`
   ${({ theme }) => css`
-  margin-bottom: calc(${theme.spacings.xxlarge} * 2);
-  ${media.greaterThan('large')`
-    margin-top: -13rem;
+    margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+    ${media.greaterThan('large')`
+      margin-top: -13rem;
+    `}
+
+
+    ${media.greaterThan('medium')`
+      margin-bottom: 0;
+      padding-top: 14rem;
+      padding-bottom: 10rem;
+      background-color: ${theme.colors.lightBg};
+      clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+      ${HeadingStyles.Wrapper} {
+        color: ${theme.colors.black};
+      }
+    `}
   `}
+`
 
 
-  ${media.greaterThan('medium')`
-    margin-bottom: 0;
-    padding-top: 14rem;
-    padding-bottom: 10rem;
+export const SectionFooter = styled.section`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.large};
+    padding-bottom: ${theme.spacings.xsmall};
+    padding-top: ${theme.spacings.xxlarge};
     background-color: ${theme.colors.lightBg};
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-    ${HeadingStyles.Wrapper} {
-      color: ${theme.colors.black};
-    }
-  `}
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
+    ${media.greaterThan('medium')`
+      padding-top: calc(${theme.spacings.xxlarge} * 2);
+      clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+    `}
   `}
 `
