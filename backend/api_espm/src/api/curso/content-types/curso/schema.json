@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos",
+  "info": {
+    "singularName": "curso",
+    "pluralName": "cursos",
+    "displayName": "curso",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nome",
+      "required": true
+    },
+    "small_descricao": {
+      "type": "text",
+      "required": true,
+      "maxLength": 160
+    },
+    "descricao": {
+      "type": "richtext",
+      "required": true
+    },
+    "preco": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "data_lancamento_curso": {
+      "type": "date"
+    },
+    "imagem_destaque": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria.categoria",
+      "inversedBy": "cursos"
+    },
+    "instrutores": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::instrutor.instrutor",
+      "inversedBy": "cursos"
+    }
+  }
+}

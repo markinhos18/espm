@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "instrutores",
+  "info": {
+    "singularName": "instrutor",
+    "pluralName": "instrutores",
+    "displayName": "instrutor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nome"
+    },
+    "cursos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::curso.curso",
+      "mappedBy": "instrutores"
+    }
+  }
+}
